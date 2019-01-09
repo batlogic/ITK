@@ -299,6 +299,13 @@ private:
   std::string m_ScanOptions;
 #endif
 
+  /**
+   * Helper function to test for some dicom like formatting.
+   * @param file A stream to test if the file is dicom like
+   * @return true if the structure of the file is dicom like
+   */
+  bool readNoPreambleDicom(   std::ifstream & file );
+
   /** defines whether this image is a 2D out of a 2D image
    *  or a 2D out of a 3D image. */
   unsigned int     m_GlobalNumberOfDimensions;
